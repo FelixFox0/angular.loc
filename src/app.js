@@ -2,7 +2,7 @@
       'use strict';
     angular.module('app', ['ngResource'])
     .config(function($provide) {
-        $provide.value('api_url', 'http://test/api/dropdown');
+        $provide.value('api_url', 'http://laravel.loc/api/dropdown');
     })
     .factory('navFactory', function($http, api_url) {
         var factory = {};
