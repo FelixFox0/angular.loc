@@ -1,0 +1,8 @@
+  <div class="test-app__comp">
+    <span class="test-app__button">
+      <span ng-click="send()">BUTTON</span>
+      <ul class="list" ng-class="cbModel? '_active' : ''">
+        <li ng-repeat="item in cbNav" class="list__item">{{item.name}}</li>
+      </ul>
+    </span>
+  </div>

@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+.test-app {
+  max-width: 200px;
+}
+
+.test-app__input input {
+  width: 100%;
+}
+
+.test-app__button {
+  color: #fff;
+  background-color: #1ca4dc;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: none;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all .2s ease;
+  text-align: center;
+  max-width: 100px;
+  position: relative;
+}
+
+.test-app__button:hover,
+.test-app__button:focus {
+  background-color: #1181ae;
+}
+
+.test-app__comp {
+  text-align: center;
+}
+
+.list {
+  list-style-type: none;
+  background-color: #545454;
+  padding: 5px;
+  margin: 0;
+  text-align: left;
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translate(-50%, 20px);
+  width: 150px;
+  max-height:300px;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s ease;
+}
+
+.list._active {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+.list::after {
+  content: "";
+  left: 50%;
+  margin-left: -10px;
+  bottom: 100%;
+  border: 10px solid transparent;
+  position: absolute;
+  border-bottom-color: #545454;
+}
+
+.list__item {
+  padding: 7px 15px;
+  transition: all .2s ease;
+}
+
+.list__item + .list__item {
+  border-top: 1px solid #3c3c3c;
+}
+
+.list__item:hover {
+  color: #1ca4dc;
+}
+
+.list__item._disabled {
+  pointer-events: none;
+  opacity: .5;
+}

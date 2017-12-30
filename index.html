@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-resource.js"></script>
+        <script src="/src/app.js"></script>
+        <link rel="stylesheet" type="text/css" href="/src/style.css" />
+    </head>
+    <body ng-app="app">
+      <div ng-controller="Controller">
+          <div class="test-app">
+        <div class="test-app__input">
+            <input ng-blur="isOpened=false" ng-focus="isOpened=true" ng-model="item" type="text">
+        </div> 
+        <div nav-menu cb-model="isOpened" cb-nav="nav"></div>
+              </div>
+    </div>
+        
+        
+    </body>
+</html>
